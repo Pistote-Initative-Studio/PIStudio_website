@@ -63,8 +63,8 @@ body {
   position: relative;
   overflow: hidden;
   background: linear-gradient(160deg, #000000 0%, #020d26 100%);
-  will-change: opacity, transform;
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  will-change: opacity;
+  transition: opacity 0.2s ease-out;
 }
 
 .hero::before {

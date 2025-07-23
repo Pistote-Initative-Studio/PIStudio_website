@@ -22,10 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const hero = document.getElementById('hero');
   const heroHeight = hero.offsetHeight;
+  const fadeDistance = 300; // distance in px over which hero fades out
 
   function handleHeroScroll() {
-    const rect = hero.getBoundingClientRect();
-    const progress = Math.min(Math.max(-rect.top / heroHeight, 0), 1);
+    const scrollY = window.scrollY || window.pageYOffset;
+    const progress = Math.min(Math.max(scrollY / fadeDistance, 0), 1);
     hero.style.opacity = 1 - progress;
     hero.style.transform = `translateY(-${progress * heroHeight * 0.5}px)`;
   }

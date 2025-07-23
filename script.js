@@ -19,4 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     sec.classList.add('fade-in');
     observer.observe(sec);
   });
+
+  const hero = document.getElementById('hero');
+  const heroHeight = hero.offsetHeight;
+
+  function handleHeroScroll() {
+    const rect = hero.getBoundingClientRect();
+    const progress = Math.min(Math.max(-rect.top / heroHeight, 0), 1);
+    hero.style.opacity = 1 - progress;
+    hero.style.transform = `translateY(-${progress * heroHeight * 0.5}px)`;
+  }
+
+  window.addEventListener('scroll', handleHeroScroll);
+  handleHeroScroll();
 });

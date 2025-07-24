@@ -23,6 +23,7 @@ h1,
 .hero h2 {
     margin: 0;
     font-family: 'Orbitron', sans-serif;
+    opacity: 1;
 }
 
 section h2 {

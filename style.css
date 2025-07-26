@@ -1,13 +1,15 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: url('bnb4.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-color: blue; /* fallback color if image fails to load */
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
+        margin: 0;
+        padding: 0;
+        /* Use the new background image.  The image is centered and not stretched so that it retains maximum clarity. */
+        background: url('bnb2.jpg') no-repeat center center fixed;
+        /* Keep the background at its natural size for clarity rather than stretching it to fill the screen. */
+        background-size: auto;
+        background-color: blue; /* fallback color if image fails to load */
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
 
 .hero {
     height: 100vh;

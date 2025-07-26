@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background: url('bnb4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: blue; /* fallback color if image fails to load */
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -38,4 +40,3 @@ section h2 {
 #projects li {
     margin-bottom: 10px;
 }
-

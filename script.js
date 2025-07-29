@@ -23,7 +23,14 @@
   window.addEventListener('scroll', () => {
     requestAnimationFrame(updateHeroOpacity);
   });
+updateHeroOpacity();
+const video = document.querySelector('.background-video');
+if (video) {
+  video.play().catch(() => {});
 
-  updateHeroOpacity();
+
+    
+  }
+  y();
 })();
 

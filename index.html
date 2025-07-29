@@ -7,17 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Pull in the site styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--
+      Full‑screen video background.  The `poster` attribute provides a fallback
+      image while the video loads and when video playback isn’t supported.  The
+      actual video file should be placed in the root of the site (e.g. in the
+      repository alongside this index.html) and named `background.mp4`.  Feel
+      free to rename it here if you choose a different filename.
+    -->
+    <video autoplay loop muted playsinline class="background-video" poster="bnb2.jpg">
+        <source src="background.mp4" type="video/mp4" />
+        <!-- Text inside the video tag will display if the user’s browser does not support video playback -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main hero section -->
     <div class="hero">
         <h1>Pistote Initiative</h1>
         <h2>Studio</h2>
     </div>
+
+    <!-- About section -->
     <section id="about">
         <h2>About Us</h2>
         <p>Pistote Initiative Studio is a startup software company focused on building modern, efficient, and creative applications for businesses and individuals.</p>
     </section>
+
+    <!-- Projects section -->
     <section id="projects">
         <h2>Our Projects</h2>
         <ul>
@@ -26,10 +45,14 @@
             <li>Future AI Tools</li>
         </ul>
     </section>
+
+    <!-- Contact section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Email us at: peterjubitz@pistotestudio.com</p>
     </section>
+
+    <!-- Script that controls the header fade on scroll.  This remains unchanged from the original version. -->
     <script src="script.js"></script>
 </body>
 </html>

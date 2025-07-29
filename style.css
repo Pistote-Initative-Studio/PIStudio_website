@@ -1,12 +1,35 @@
+/*
+ * Base styles for the Pistote Initiative Studio website.  The body uses a
+ * simple colour fallback because the video background is provided via a
+ * <video> element in index.html.  The fonts and colours mirror the
+ * original design.
+ */
 body {
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background-color: #000; /* Fallback colour in case the video doesn’t load */
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
+/*
+ * The video is positioned absolutely to fill the entire viewport.  Using
+ * object-fit: cover ensures that it scales to cover the screen without
+ * distortion while cropping as necessary.  The z-index of -1 keeps it
+ * behind all other content on the page.
+ */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero section retains full viewport height */
 .hero {
     height: 100vh;
     display: flex;
@@ -38,4 +61,3 @@ section h2 {
 #projects li {
     margin-bottom: 10px;
 }
-

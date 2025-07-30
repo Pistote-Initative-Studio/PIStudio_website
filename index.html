@@ -19,7 +19,13 @@
       free to rename it here if you choose a different filename.
     -->
     <video autoplay loop muted playsinline preload="auto" class="background-video">
-        <source src="background.mp4" type="video/mp4" />
+        <!--
+          Stream the background video from an external CDN rather than bundling the large
+          file in the repository.  The source URL below points at the video hosted on
+          Bunny.net, which serves the file via their CDN.  Remove the local
+          `background.mp4` file from the repository when deploying this update.
+        -->
+        <source src="https://pistote-studio.b-cdn.net/background.mp4" type="video/mp4" />
         <!-- Text inside the video tag will display if the user’s browser does not support the video tag. -->
         Your browser does not support the video tag.
     </video>

@@ -38,6 +38,10 @@ body {
     align-items: center;
 }
 
+.hero-title {
+    transform: translateY(-120px);
+}
+
 section {
     padding: 80px 0;
 }

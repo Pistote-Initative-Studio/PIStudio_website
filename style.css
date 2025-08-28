@@ -123,3 +123,14 @@ section h2 {
 #projects .carousel-button:focus {
     outline: none;
 }
+
+.learn-more-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}

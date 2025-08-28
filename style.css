@@ -134,3 +134,10 @@ section h2 {
     border-radius: 4px;
     font-weight: bold;
 }
+/* Full-screen static background for subpages */
+.subpage-background {
+    background: url('assets/subpage-background.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+

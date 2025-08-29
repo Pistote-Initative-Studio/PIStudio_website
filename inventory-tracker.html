@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9205524998199511" crossorigin="anonymous"></script>
+  <!-- Google CMP -->
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-9205524998199511?ers=1" nonce="cmp-nonce"></script>
+  <script>
+    (function() {
+      function signalGooglefcPresent() {
+        if (!window.frames['googlefcPresent']) {
+          if (document.body) {
+            const iframe = document.createElement('iframe');
+            iframe.style.cssText = 'width:0;height:0;border:0;display:none';
+            iframe.name = 'googlefcPresent';
+            document.body.appendChild(iframe);
+          } else {
+            setTimeout(signalGooglefcPresent, 0);
+          }
+        }
+      }
+      signalGooglefcPresent();
+    })();
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>Inventory Tracker</title>
+  <script>
+    function loadAds() {
+      const ads = document.createElement('script');
+      ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9205524998199511';
+      ads.async = true;
+      ads.crossOrigin = 'anonymous';
+      ads.onload = () => (adsbygoogle = window.adsbygoogle || []).push({});
+      document.head.appendChild(ads);
+    }
+
+    window.addEventListener('load', () => {
+      if (typeof window.__tcfapi === 'function') {
+        __tcfapi('addEventListener', 2, (tcData, success) => {
+          if (success && tcData.eventStatus === 'useractioncomplete') {
+            if (tcData.purpose.consents['1']) {
+              loadAds();
+            }
+          }
+        });
+      }
+    });
+  </script>
 </head>
 <body class="subpage-background">
   <div class="content-block">
@@ -22,6 +70,13 @@
     <p class="app-summary">
       Monitor and manage office supplies with real-time counts, low-stock alerts, and easy adjustments to keep inventory organized.
     </p>
-  </div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9205524998199511"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <!-- Additional ad blocks can be added below -->
+    </div>
 </body>
 </html>

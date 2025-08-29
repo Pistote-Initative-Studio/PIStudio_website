@@ -53,6 +53,25 @@ h1,
     opacity: 1;
 }
 
+button,
+.button,
+.btn {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
 section h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;
@@ -107,13 +126,8 @@ section h2 {
 }
 
 #projects .carousel-button {
-    background: transparent;
-    border: none;
-    color: white;
     font-size: 2rem;
-    cursor: pointer;
     padding: 10px;
-    transition: color 0.3s ease;
 }
 
 #projects .carousel-button:hover {
@@ -128,13 +142,9 @@ section h2 {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: #fff;
-    color: #000;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
 }
 
 /* Content block for subpages */

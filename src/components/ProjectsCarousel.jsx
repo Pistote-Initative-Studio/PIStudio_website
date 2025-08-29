@@ -42,7 +42,7 @@ export default function ProjectsCarousel() {
 
   return (
     <div className="carousel">
-      <button className="carousel-button prev" aria-label="Previous project" onClick={prev}>
+      <button className="carousel-button btn prev" aria-label="Previous project" onClick={prev}>
         &#10094;
       </button>
       <div className="carousel-track-container">
@@ -63,7 +63,7 @@ export default function ProjectsCarousel() {
           ))}
         </div>
       </div>
-      <button className="carousel-button next" aria-label="Next project" onClick={next}>
+      <button className="carousel-button btn next" aria-label="Next project" onClick={next}>
         &#10095;
       </button>
     </div>

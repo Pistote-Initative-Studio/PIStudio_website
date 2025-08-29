@@ -6,7 +6,7 @@
   <div class="carousel">
     <img src="/assets/inventory-tracker.png" alt="Inventory Tracker screenshot" />
   </div>
-  <button class="cta-button">Use the App</button>
+  <button class="cta-button btn">Use the App</button>
   <div class="summary">
     <p>The Inventory Tracker helps small businesses monitor stock levels and stay organized.</p>
     <ul>
@@ -41,12 +41,8 @@
   .cta-button {
     margin: 1.5rem auto;
     padding: 0.75rem 1.5rem;
-    background-color: #fff;
-    color: #000;
-    border: none;
     border-radius: 4px;
     font-weight: bold;
-    cursor: pointer;
   }
 
   .summary {

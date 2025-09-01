@@ -51,7 +51,7 @@ export default function ProjectsCarousel() {
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {projects.map((project) => (
-            <Link to={project.path} className="carousel-slide" key={project.title}>
+            <div className="carousel-slide" key={project.title}>
               <img
                 src={project.image}
                 alt={`${project.title} screenshot`}
@@ -59,7 +59,10 @@ export default function ProjectsCarousel() {
               />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-            </Link>
+              <Link to={project.path}>
+                <button type="button">Learn More</button>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

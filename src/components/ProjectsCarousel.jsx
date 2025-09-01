@@ -6,7 +6,7 @@ const projects = [
     title: 'Wheels Up',
     image: '/assets/wheels-up.png',
     description: 'Aircraft loading planner',
-    path: '/wheels-up',
+    path: '/wheelsup',
   },
   {
     title: 'Inventory Tracker',

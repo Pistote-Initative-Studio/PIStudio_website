@@ -10,7 +10,7 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<ProjectsCarousel />} />
-      <Route path="/wheels-up" element={<WheelsUpPage />} />
+      <Route path="/wheelsup" element={<WheelsUpPage />} />
       <Route path="/inventory-tracker" element={<InventoryTrackerPage />} />
       <Route path="/budget-balanced" element={<BudgetBalancedPage />} />
       <Route path="/marriage-managed" element={<MarriageManagedPage />} />

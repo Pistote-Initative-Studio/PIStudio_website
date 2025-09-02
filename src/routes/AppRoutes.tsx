@@ -5,6 +5,7 @@ import InventoryTrackerPage from '../pages/InventoryTrackerPage';
 import BudgetBalancedPage from '../pages/BudgetBalancedPage';
 import MarriageManagedPage from '../pages/MarriageManagedPage';
 import BusinessDirectoryPage from '../pages/BusinessDirectoryPage';
+import SiteMapPage from '../pages/SiteMapPage';
 
 export default function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ export default function AppRoutes() {
       <Route path="/budget-balanced" element={<BudgetBalancedPage />} />
       <Route path="/marriage-managed" element={<MarriageManagedPage />} />
       <Route path="/business-directory" element={<BusinessDirectoryPage />} />
+      <Route path="/sitemap" element={<SiteMapPage />} />
     </Routes>
   );
 }

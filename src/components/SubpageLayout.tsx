@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import background from '/assets/subpage-background.jpg';
+import Footer from './Footer';
 
 interface SubpageLayoutProps {
   title: string;
@@ -16,18 +17,28 @@ export default function SubpageLayout({ title, children }: SubpageLayoutProps) {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     color: '#fff',
     padding: '1rem',
   };
 
+  const contentStyle: React.CSSProperties = {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
+
   return (
     <div style={style}>
-      <h1>{title}</h1>
-      <div style={{ maxWidth: '600px' }}>{children}</div>
-      <Link to="/">Back to Home</Link>
+      <div style={contentStyle}>
+        <h1>{title}</h1>
+        <div style={{ maxWidth: '600px' }}>{children}</div>
+        <Link to="/">Back to Home</Link>
+      </div>
+      <Footer />
     </div>
   );
 }

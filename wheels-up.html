@@ -65,12 +65,13 @@
       flex: 0 0 100%;
     }
     .slide img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      aspect-ratio: 16 / 8; /* keeps a nice wide aspect */
-    }
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* show the whole image */
+  background: #000;    /* optional — fills letterbox area */
+  aspect-ratio: auto;  /* let images define their own height */
+}
 
     .nav {
       position: absolute;

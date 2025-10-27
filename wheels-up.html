@@ -1,39 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Google CMP -->
-  <script async src="https://fundingchoicesmessages.google.com/i/pub-9205524998199511?ers=1" nonce="cmp-nonce"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wheels Up — Aircraft Loading Planner</title>
+  <link rel="icon" href="assets/wheels-up.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Page chrome */
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: url('assets/subpage-background.png') center/cover fixed no-repeat;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-shadow: 0 2px 6px rgba(0,0,0,.4);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    a { color: #fff; }
+
+    /* Centered content card */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(0,0,0,.45);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,.35);
+      backdrop-filter: blur(3px);
+    }
+    .title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.6rem, 2vw + 1rem, 2.25rem);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    /* Carousel */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      background: rgba(0,0,0,.25);
+    }
+    .track {
+      display: flex;
+      transition: transform 400ms ease;
+      will-change: transform;
+      width: 100%;
+    }
+    .slide {
+      flex: 0 0 100%;
+    }
+    .slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16 / 8; /* keeps a nice wide aspect */
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(0,0,0,.45);
+      color: #fff;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 36px;
+      text-align: center;
+    }
+    .nav.prev { left: 8px; }
+    .nav.next { right: 8px; }
+
+    .dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,.5);
+      cursor: pointer;
+    }
+    .dot.active { background: #fff; }
+
+    /* Body copy */
+    .content { margin-top: .75rem; }
+    .content h2 { margin: 0 0 .5rem; font-size: 1.25rem; }
+    .content p { margin: 0 0 .75rem; }
+    .content ul { margin: 0; padding-left: 1.25rem; }
+
+    /* Footer link */
+    .back {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: .5rem .9rem;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back:hover { background: rgba(255,255,255,.08); }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="card" role="main">
+      <h1 class="title">Wheels Up — Aircraft Loading Planner</h1>
+
+      <!-- Carousel -->
+      <section class="carousel" aria-label="Wheels Up screenshots">
+        <div class="track" id="wu-track">
+          <div class="slide"><img src="assets/wheels-up-1.jpg" alt="Wheels Up screenshot 1"></div>
+          <div class="slide"><img src="assets/wheels-up-2.jpg" alt="Wheels Up screenshot 2"></div>
+          <div class="slide"><img src="assets/wheels-up-3.jpg" alt="Wheels Up screenshot 3"></div>
+          <div class="slide"><img src="assets/wheels-up-4.jpg" alt="Wheels Up screenshot 4"></div>
+          <div class="slide"><img src="assets/wheels-up-5.jpg" alt="Wheels Up screenshot 5"></div>
+          <div class="slide"><img src="assets/wheels-up-6.jpg" alt="Wheels Up screenshot 6"></div>
+        </div>
+
+        <button class="nav prev" aria-label="Previous slide">‹</button>
+        <button class="nav next" aria-label="Next slide">›</button>
+        <div class="dots" id="wu-dots" aria-label="Slide navigation"></div>
+      </section>
+
+      <!-- Description -->
+      <section class="content">
+        <h2>Fast, clear aircraft load planning for ramp crews</h2>
+        <p>
+          Wheels Up is a purpose-built planner for air cargo ground teams. Drag and drop ULDs across
+          Ball Deck, Train, Plane, and Storage views; mark Dangerous Goods (DG) with automatic
+          red-and-white safety borders; and keep your whole shift in sync with state that persists
+          between sessions.
+        </p>
+        <ul>
+          <li>Drag-and-drop ULDs across Ball Deck, Trains, Plane, and Storage</li>
+          <li>DG checkbox with confirmations and checkered border styling</li>
+          <li>Configurable planes, tugs, trains, and dolly counts</li>
+          <li>Plane page with labeled slots (1L/1R … 9L/9R + A10)</li>
+          <li>Inbound/Outbound and Main/Lower deck toggles</li>
+          <li>Daily auto-reset of operational data; settings persist</li>
+        </ul>
+      </section>
+
+      <a class="back" href="index.html">← Back to Home</a>
+    </main>
+  </div>
+
+  <!-- Tiny, isolated carousel logic -->
   <script>
-    (function() {
-      function signalGooglefcPresent() {
-        if (!window.frames['googlefcPresent']) {
-          if (document.body) {
-            const iframe = document.createElement('iframe');
-            iframe.style.cssText = 'width:0;height:0;border:0;display:none';
-            iframe.name = 'googlefcPresent';
-            document.body.appendChild(iframe);
-          } else {
-            setTimeout(signalGooglefcPresent, 0);
-          }
-        }
+    (function(){
+      const track = document.getElementById('wu-track');
+      const slides = Array.from(track.children);
+      const prevBtn = document.querySelector('.nav.prev');
+      const nextBtn = document.querySelector('.nav.next');
+      const dotsWrap = document.getElementById('wu-dots');
+
+      let index = 0;
+
+      // dots
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.className = 'dot' + (i === 0 ? ' active' : '');
+        b.setAttribute('aria-label', 'Go to slide ' + (i+1));
+        b.addEventListener('click', () => go(i));
+        dotsWrap.appendChild(b);
+      });
+
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dotsWrap.querySelectorAll('.dot').forEach((d, di) => {
+          d.classList.toggle('active', di === index);
+        });
       }
-      signalGooglefcPresent();
+
+      prevBtn.addEventListener('click', () => go(index - 1));
+      nextBtn.addEventListener('click', () => go(index + 1));
+      go(0);
     })();
   </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied'
-    });
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Wheels Up</title>
-</head>
-<body class="subpage-background">
-  <!-- Content coming soon -->
 </body>
 </html>

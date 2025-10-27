@@ -55,7 +55,7 @@
       margin-bottom: 1rem;
       background: rgba(0,0,0,.25);
       backdrop-filter: blur(3px);
-      height: 600px;          /* ← set the overall height here */
+      height: 480px;          /* ← set the overall height here */
     }
     .track {
       display: flex;
@@ -73,8 +73,11 @@
     }
     .slide img {
   display: block;
-  width: 100%;
-  height: 600px; /* makes the carousel a bit taller */
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: 100%; /* makes the carousel a bit taller */
+  margin: 0 auto;
   object-fit: contain;
   background: rgba(0, 0, 0, 0.35); /* semi-transparent background to match card */
   backdrop-filter: blur(3px);

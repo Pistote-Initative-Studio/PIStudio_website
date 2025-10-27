@@ -138,6 +138,30 @@
       font-weight: 600;
     }
     .back:hover { background: rgba(255,255,255,.08); }
+
+    .store-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 10px 0;
+}
+
+.google-play-badge {
+  height: 65px; /* standard web size */
+  width: auto;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.google-play-badge:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 600px) {
+  .google-play-badge {
+    height: 50px;
+  }
+}
   </style>
 </head>
 
@@ -161,6 +185,16 @@
         <button class="nav next" aria-label="Next slide">›</button>
         <div class="dots" id="wu-dots" aria-label="Slide navigation"></div>
       </section>
+
+      <div class="store-badges">
+  <a href="https://play.google.com/store/apps/details?id=com.pistoteinitiative.wheelsup" target="_blank" rel="noopener">
+    <img
+      src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+      alt="Get it on Google Play"
+      class="google-play-badge"
+    />
+  </a>
+</div>
 
       <!-- Description -->
       <section class="content">

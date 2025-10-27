@@ -67,10 +67,11 @@
     .slide img {
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain; /* show the whole image */
-  background: #000;    /* optional — fills letterbox area */
-  aspect-ratio: auto;  /* let images define their own height */
+  height: 600px; /* makes the carousel a bit taller */
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.35); /* semi-transparent background to match card */
+  backdrop-filter: blur(3px);
+  border-radius: 12px; /* softens edges for cleaner integration */
 }
 
     .nav {
